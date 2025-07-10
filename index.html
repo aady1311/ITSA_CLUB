@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITSAClub - Information Technology Student Association</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation At Top add feature for mobile to show right side to left side button -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-users"></a></i>
+                <span>ITSA</span>
+            </div>
+            <!-- <div class="nav-logo">
+                <a href="#home">
+                    <img src="./DOC-20230318-WA0009..jpg" alt="ITSA Logo" class="logo-circle"> // not working right now
+                </a>
+                <span>ITSA</span>
+            </div> -->
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section main Page have to add main content-->
+    <section id="home" class="section">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Welcome to ITSA</h1>
+                <p>Information Technology Student Association</p>
+                <button class="cta-button" id="showRecentEvents">
+                    <i class="fas fa-calendar"></i>
+                    View Recent Events
+                </button>
+            </div>
+
+            <!-- Auto-rotating Events Carousel recent event every 4 seconds ke baad change hoga-->
+            <div class="events-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide active">
+                            <img src="https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Tech Workshop">
+                            <div class="slide-content">
+                                <h3>AI & Machine Learning Workshop</h3>
+                                <p>Learn cutting-edge AI technologies with industry experts</p>
+                                <span class="date">Dec 15, 2024</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Coding Competition">
+                            <div class="slide-content">
+                                <h3>Annual Coding Championship</h3>
+                                <p>Compete with the best programmers in the region</p>
+                                <span class="date">Dec 20, 2024</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Tech Conference">
+                            <div class="slide-content">
+                                <h3>Innovation Summit 2024</h3>
+                                <p>Discover the future of technology and innovation</p>
+                                <span class="date">Dec 25, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators" id="carouselIndicators"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+       <!-- contact section added  -->
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Address</h4>
+            <p>Village Vevoor, Manor Road, Palghar (East), Palghar District - 401404, Maharashtra, India</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h4>Phone</h4>
+            <p>+919152717656</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p>124aditya4027@gmail.com</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form" action="https://formspree.io/f/xayrrald" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+
+        <!-- Message Display on screen for 3 sec -->
+        <div class="success-message" style="color: green; margin-top: 10px; display: none;"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- View Events Popup recent event to add  -->
+    <div id="recentEventsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Recent Events</h2>
+            <div class="recent-events-list">
+                <div class="recent-event">
+                    <img src="https://media.istockphoto.com/id/1413937269/photo/overworked-asian-office-employee-using-laptop-computer-for-working-late-at-night-in-office.jpg?s=612x612&w=0&k=20&c=rmhXY78eVdJhXbNkapyDc8EFwX6WSsHJ-LYbP6UX4VU="
+                        alt="Recent Event">
+                    <div class="event-details">
+                        <h3>AI Workshop Completed</h3>
+                        <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
+                        <span class="event-date">December 10, 2024</span>
+                    </div>
+                </div>
+                <div class="recent-event">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/049/191/168/small_2x/a-modern-workspace-featuring-advanced-technology-including-a-holographic-calendar-and-illuminated-data-streams-creating-an-innovative-and-dynamic-environment-for-productivity-photo.jpg"
+                        alt="Recent Event">
+                    <div class="event-details">
+                        <h3>Coding Competition Finals</h3>
+                        <p>Amazing competition with creative solutions and innovative approaches</p>
+                        <span class="event-date">December 5, 2024</span>
+                    </div>
+                </div>
+                <div class="recent-event">
+                    <img src="https://media.istockphoto.com/id/1262359105/photo/late-at-night-in-modern-office-diverse-team-of-successful-and-ambitious-businessmen-and.jpg?s=612x612&w=0&k=20&c=4Hy9F-xb14zBnCA4U4PMo5lmxOimP6XrPyPXv9st8z4="
+                        alt="Recent Event">
+                    <div class="event-details">
+                        <h3>Tech Talk Series</h3>
+                        <p>Industry experts shared insights on emerging technologies</p>
+                        <span class="event-date">November 28, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About Section for club -->
+    <!-- Events Section all events information -->
+    <!-- Achievements Section card to show-->
+    <!-- Team Section different types of team to show-->
+    <!-- Contact Section inbuild feature -->
+    <!-- Recent Events Popup -->
+
+
+    <script src="script.js"></script>
+    <script src="./contact.js"></script>
+</body>
+
+</html>
