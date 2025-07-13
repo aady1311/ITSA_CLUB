@@ -773,3 +773,76 @@ body {
   background-color: #e6ffee;
   border: 1px solid #00cc66;
 }
+
+.event-popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 10px;
+}
+
+.event-popup-overlay.show {
+  display: flex;
+}
+
+.event-popup-box {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 90%;
+  height: auto;
+  max-height: 90vh;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.event-popup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Close button to close it  */
+.event-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  color: black;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* PC view it should cover according to  */
+@media (min-width: 768px) {
+  .event-popup-box {
+    max-width: 480px;
+    max-height: 80vh;
+    border-radius: 12px;
+  }
+}
+
+/* Fade-in animation how it will present come on screen */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+

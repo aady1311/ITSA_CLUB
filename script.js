@@ -31,14 +31,14 @@ class NavigationManager {
             this.toggleMobileMenu();
         });
 
-        // Close mobile menu when clicking outside
+       
         document.addEventListener('click', (e) => {
             if (!this.navMenu.contains(e.target) && !this.hamburger.contains(e.target)) {
                 this.closeMobileMenu();
             }
         });
 
-        // Handle scroll for section detection
+       
         window.addEventListener('scroll', () => {
             this.updateActiveNavOnScroll();
         });
@@ -148,13 +148,12 @@ class EventsCarousel {
         const translateX = -this.currentSlide * 100;
         this.track.style.transform = `translateX(${translateX}%)`;
 
-        // Update indicators
+        
         const indicators = this.indicatorsContainer.querySelectorAll('.indicator');
         indicators.forEach((indicator, index) => {
             indicator.classList.toggle('active', index === this.currentSlide);
         });
 
-        // Update slide active states
         this.slides.forEach((slide, index) => {
             slide.classList.toggle('active', index === this.currentSlide);
         });
@@ -168,7 +167,7 @@ class EventsCarousel {
             if (this.isPlaying) {
                 this.nextSlide();
             }
-        }, 3000); // Change slide every 4 seconds for better viewing
+        }, 3000); // Change slide every 3 seconds for better viewing
     }
 
     stopAutoRotate() {
@@ -197,7 +196,7 @@ class EventsCarousel {
         carouselContainer.addEventListener('mouseenter', () => this.pauseAutoRotate());
         carouselContainer.addEventListener('mouseleave', () => this.resumeAutoRotate());
 
-        // Touch/swipe support for mobile
+        // Touch support for mobile
         let startX = 0;
         let endX = 0;
 
@@ -332,7 +331,7 @@ class ModalManager {
             this.hideModal();
         });
 
-        // Close modal when clicking outside
+      
         this.modal.addEventListener('click', (e) => {
             if (e.target === this.modal) {
                 e.preventDefault();
@@ -341,7 +340,7 @@ class ModalManager {
             }
         });
 
-        // Close modal with Escape key
+        
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && this.modal.style.display === 'block') {
                 e.preventDefault();
@@ -355,13 +354,13 @@ class ModalManager {
         this.modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
 
-        // Focus management for accessibility
+        
         const firstFocusable = this.modal.querySelector('.close');
         if (firstFocusable) {
             firstFocusable.focus();
         }
 
-        // Pause carousel when modal is open
+       
         if (window.eventsCarousel) {
             window.eventsCarousel.pauseAutoRotate();
         }
@@ -371,10 +370,10 @@ class ModalManager {
         this.modal.style.display = 'none';
         document.body.style.overflow = 'auto';
 
-        // Return focus to the button that opened the modal
+       
         this.showButton.focus();
 
-        // Resume carousel when modal is closed
+       
         if (window.eventsCarousel) {
             window.eventsCarousel.resumeAutoRotate();
         }
@@ -399,12 +398,12 @@ class ContactForm {
         const formData = new FormData(this.form);
         const data = Object.fromEntries(formData);
 
-        // Basic form validation
+        
         if (!this.validateForm(data)) {
             return;
         }
 
-        // Simulate form submission
+        
         this.showSuccessMessage();
         this.form.reset();
     }
@@ -619,17 +618,17 @@ class AccessibilityManager {
     }
 
     addKeyboardNavigation() {
-        // Enhanced keyboard navigation for carousel
+        
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Tab') {
-                // Ensure proper tab order
+                
                 this.manageFocusOrder(e);
             }
         });
     }
 
     addAriaLabels() {
-        // Add ARIA labels for better screen reader support
+       
         const carousel = document.querySelector('.carousel-container');
         if (carousel) {
             carousel.setAttribute('role', 'region');
@@ -680,17 +679,17 @@ class AccessibilityManager {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize all managers
+    
     new NavigationManager();
     window.eventsCarousel = new EventsCarousel();
     new ThemeManager();
     new ModalManager();
-    // new ContactForm();
+  
     new AnimationManager();
     new PerformanceOptimizer();
     new AccessibilityManager();
 
-    // Add welcome animation
+    
     setTimeout(() => {
         document.body.classList.add('loaded');
     }, 100);
@@ -703,12 +702,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.log(' Accessibility features implemented');
 });
 
-// Error handling
+
 window.addEventListener('error', (e) => {
     console.error('An error occurred:', e.error);
 });
 
-// Service Worker registration (for future PWA support)
+
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         // navigator.serviceWorker.register('/sw.js')
@@ -717,9 +716,21 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Handle reduced motion preference
+
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    // Disable animations for users who prefer reduced motion
+    
     document.documentElement.style.setProperty('--animation-duration', '0s');
 }
+ // popup feature
+ document.addEventListener('DOMContentLoaded', function () {
+    const overlay = document.getElementById('eventPopupOverlay');
+    const closeBtn = document.getElementById('eventPopupClose');
 
+  
+    overlay.classList.add('show');
+
+    
+    closeBtn.addEventListener('click', function () {
+      overlay.classList.remove('show');
+    });
+  });
