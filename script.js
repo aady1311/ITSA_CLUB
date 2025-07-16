@@ -247,3 +247,37 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('error', e => {
     console.error('Error:', e.error);
 });
+
+
+// view more section
+document.addEventListener("DOMContentLoaded", () => {
+    const BATCH_SIZE = 3;
+
+    document.querySelectorAll(".team-category").forEach(category => {
+        const memberCards = category.querySelectorAll(".member-card");
+        const viewMoreBtn = category.querySelector(".view-more-btn");
+
+        let isExpanded = false;
+
+        const showInitial = () => {
+            memberCards.forEach((card, index) => {
+                card.classList.toggle("visible", index < BATCH_SIZE);
+            });
+            viewMoreBtn.textContent = "View More";
+            isExpanded = false;
+        };
+
+        const showAll = () => {
+            memberCards.forEach(card => card.classList.add("visible"));
+            viewMoreBtn.textContent = "View Less";
+            isExpanded = true;
+        };
+
+        viewMoreBtn?.addEventListener("click", () => {
+            isExpanded ? showInitial() : showAll();
+        });
+
+        // Initialize each category
+        showInitial();
+    });
+});
