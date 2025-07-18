@@ -752,86 +752,87 @@ body {
 }
 
 .success-message {
-  font-weight: 500;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #e6ffee;
-  border: 1px solid #00cc66;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #e6ffee;
+    border: 1px solid #00cc66;
 }
 
 .event-popup-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  padding: 10px;
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 10px;
 }
 
 .event-popup-overlay.show {
-  display: flex;
+    display: flex;
 }
 
 .event-popup-box {
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  width: 90%;
-  height: auto;
-  max-height: 90vh;
-  position: relative;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-  animation: fadeIn 0.3s ease-in-out;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 90%;
+    height: auto;
+    max-height: 90vh;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 .event-popup-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .event-popup-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: white;
-  color: black;
-  font-size: 18px;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    color: black;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
-  .event-popup-box {
-    max-width: 480px;
-    max-height: 80vh;
-    border-radius: 12px;
-  }
+    .event-popup-box {
+        max-width: 480px;
+        max-height: 80vh;
+        border-radius: 12px;
+    }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 
 .tech-section {
     /* background-color: var(--bg-secondary); */
-        background-color: var(--bg-primary);
-    
+    background-color: var(--bg-primary);
+
     padding: 5rem 0;
 }
 
@@ -852,7 +853,7 @@ body {
 .tech-content {
     display: flex;
     gap: 3rem;
-    position: relative; 
+    position: relative;
 }
 
 
@@ -941,20 +942,20 @@ body {
     .tech-content {
         flex-direction: column;
     }
-    
+
     .tech-content::after {
         display: none;
     }
-    
+
     .tech-text {
         padding-right: 0;
         margin-bottom: 3rem;
     }
-    
+
     .tech-stats-container {
         padding-left: 0;
     }
-    
+
     .tech-text-divider {
         margin: 1.5rem 0;
     }
@@ -964,15 +965,15 @@ body {
     .tech-stats-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .tech-main-title {
         font-size: 2rem;
     }
-    
+
     .tech-subtitle {
         font-size: 1.3rem;
     }
-    
+
     .tech-stat {
         padding: 1.5rem;
     }
@@ -1000,7 +1001,7 @@ body {
 }
 
 .member-card {
-        background-color: var(--card-bg);
+    background-color: var(--card-bg);
     color: var(--text-primary);
     padding: 1.5rem;
     border-radius: 15px;
@@ -1046,12 +1047,13 @@ body {
 
 .member-card {
     width: 300px;
-     background-color: var(--card-bg);
+    background-color: var(--card-bg);
     color: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    display: none; /* Hide all initially */
+    display: none;
+    /* Hide all initially */
 }
 
 .member-card.visible {
@@ -1070,4 +1072,29 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #2563eb; 
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #1d4ed8; 
 }

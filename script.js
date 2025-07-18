@@ -249,7 +249,7 @@ window.addEventListener('error', e => {
 });
 
 
-// view more section
+
 document.addEventListener("DOMContentLoaded", () => {
     const BATCH_SIZE = 3;
 
@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
             isExpanded ? showInitial() : showAll();
         });
 
-        // Initialize each category
+        
         showInitial();
     });
 });
