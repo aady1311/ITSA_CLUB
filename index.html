@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+
 </head>
 
 <body>
@@ -49,15 +52,24 @@
 
     <!-- Home Section main Page have to add main content-->
     <section id="home" class="section">
-        <div class="hero">
-            <div class="hero-content">
+        <div class="hero" id="vanta-bg">
+            <!-- <div class="hero-content">
                 <h1>Welcome to ITSA</h1>
                 <p>Information Technology Student Association</p>
                 <button class="cta-button" id="showRecentEvents">
                     <i class="fas fa-calendar"></i>
                     View Recent Events
                 </button>
-            </div>
+            </div> -->
+
+            <div class="hero-content">
+            <h1>Welcome to ITSA</h1>
+            <p>Information Technology Student Association</p>
+            <button class="cta-button" id="showRecentEvents">
+                <i class="fas fa-calendar"></i>
+                View Recent Events
+            </button>
+        </div>
 
             <!-- Auto-rotating Events Carousel recent event every 4 seconds ke baad change hoga-->
             <div class="events-carousel">
@@ -215,8 +227,8 @@
                     </div>
                     <button id="viewMoreBtn" class="view-more-btn">View More</button>
                 </div>
-                
-                 <div class="team-category">
+
+                <div class="team-category">
                     <h3>Event & Decor Team</h3>
                     <div class="team-members">
                         <div class="member-card">
@@ -226,8 +238,8 @@
                             <p>Head 2025-2026 </p>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/_tirrth_/" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/_tirrth_/" target="_blank" class="social-btn"><i
+                                        class="fab fa-instagram"></i></a>
                                 <!-- <a href="https://www.linkedin.com/in/vishwangh-patil-229b27311" target="_blank"
                                     class="social-btn"><i class="fab fa-linkedin"></i></a> -->
                             </div>
@@ -240,8 +252,8 @@
                             <p>Joint Head 2025-2026 </p>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/_.nimoooo.t/" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/_.nimoooo.t/" target="_blank" class="social-btn"><i
+                                        class="fab fa-instagram"></i></a>
                                 <a href="https://www.linkedin.com/in/nimisha-tamore-1423942a6" target="_blank"
                                     class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
@@ -251,13 +263,13 @@
                             <img src="https://images.pexels.com/photos/6203790/pexels-photo-6203790.jpeg"
                                 alt="Team Member">
                             <h4>Mr. Atharva Khot</h4>
-                            <p>Joint Head  2025-2026 </p>
+                            <p>Joint Head 2025-2026 </p>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
                                 <a href="https://www.instagram.com/who__atharva/" target="_blank" class="social-btn"><i
                                         class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/atharva-khot-910122290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-btn"><i
-                                        class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/atharva-khot-910122290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
 
                         </div>
@@ -274,21 +286,21 @@
                                         class="fab fa-linkedin"></i></a> -->
                             </div>
                         </div>
-                          <div class="member-card">
+                        <div class="member-card">
                             <img src="https://images.pexels.com/photos/6203790/pexels-photo-6203790.jpeg"
                                 alt="Team Member">
                             <h4>Mr. Sundar Rajput</h4>
                             <p>Member 2025-2026 </p>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/viddhii.univerxse?igsh=MWh4YWFwbWN0MzFvMw==" target="_blank" class="social-btn"><i
-                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/viddhii.univerxse?igsh=MWh4YWFwbWN0MzFvMw=="
+                                    target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
                                 <!-- <a href="https://www.linkedin.com/in/atharva-khot-910122290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-btn"><i
                                         class="fab fa-linkedin"></i></a> -->
                             </div>
 
                         </div>
-                          <div class="member-card">
+                        <div class="member-card">
                             <img src="https://images.pexels.com/photos/6203790/pexels-photo-6203790.jpeg"
                                 alt="Team Member">
                             <h4>Ms. Aastha Joshi</h4>
@@ -302,7 +314,7 @@
                             </div>
 
                         </div>
-                          <div class="member-card">
+                        <div class="member-card">
                             <img src="https://images.pexels.com/photos/6203790/pexels-photo-6203790.jpeg"
                                 alt="Team Member">
                             <h4>Mr. Riz Lopes</h4>
@@ -316,7 +328,7 @@
                             </div>
 
                         </div>
-                          <div class="member-card">
+                        <div class="member-card">
                             <img src="https://images.pexels.com/photos/6203790/pexels-photo-6203790.jpeg"
                                 alt="Team Member">
                             <h4>Ms. Shamitha Palai</h4>
@@ -325,20 +337,20 @@
                             <div class="social-icons">
                                 <a href="https://www.instagram.com/shamitha_.02/" target="_blank" class="social-btn"><i
                                         class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/shamitha-palai-280606375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app&original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" class="social-btn"><i
-                                        class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/shamitha-palai-280606375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app&original_referer=https%3A%2F%2Fwww.google.com%2F"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
 
                         </div>
-                          <div class="member-card">
+                        <div class="member-card">
                             <img src="https://images.pexels.com/photos/6203790/pexels-photo-6203790.jpeg"
                                 alt="Team Member">
                             <h4>Ms. Gayatri Patil</h4>
                             <p>Member 2025-2026 </p>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/gayatri_patil_526/" target="_blank" class="social-btn"><i
-                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/gayatri_patil_526/" target="_blank"
+                                    class="social-btn"><i class="fab fa-instagram"></i></a>
                                 <!-- <a href="https://www.linkedin.com/in/atharva-khot-910122290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-btn"><i
                                         class="fab fa-linkedin"></i></a> -->
                             </div>
@@ -358,10 +370,10 @@
                             <p>Head 2025-2026 </p>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/_manasv.iii?igsh=MWl2MDA0eGk1NzgxOA==" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/manasvi-kadu-8729b3286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
-                                    class="social-btn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/_manasv.iii?igsh=MWl2MDA0eGk1NzgxOA=="
+                                    target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/manasvi-kadu-8729b3286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
 
                         </div>
@@ -372,8 +384,8 @@
                             <p>Joint Head 2025-2026 </p>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/devvikaaa14__/" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/devvikaaa14__/" target="_blank" class="social-btn"><i
+                                        class="fab fa-instagram"></i></a>
                                 <a href="https://www.linkedin.com/in/devika-gharat-30329a312" target="_blank"
                                     class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
@@ -386,10 +398,10 @@
                             <p>Member 2025-2026 </p>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/manaswi_gharat/" target="_blank" class="social-btn"><i
-                                        class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/manaswi-gharat-8a2895277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-btn"><i
-                                        class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/manaswi_gharat/" target="_blank"
+                                    class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/manaswi-gharat-8a2895277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
 
                         </div>
@@ -400,8 +412,8 @@
                             <p>Member 2025-2026 </p>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/milonii24?igsh=cTRuaWh5NW91c2cz&utm_source=qr" target="_blank" class="social-btn"><i
-                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/milonii24?igsh=cTRuaWh5NW91c2cz&utm_source=qr"
+                                    target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
                                 <!-- <a href="https://www.linkedin.com/in/aditya1311/" target="_blank" class="social-btn"><i
                                         class="fab fa-linkedin"></i></a> -->
                             </div>
@@ -428,10 +440,10 @@
                             <p>Member 2025-2026 </p>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/shaikhparveen.20/" target="_blank" class="social-btn"><i
-                                        class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/parveen-shaikh-328656301" target="_blank" class="social-btn"><i
-                                        class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/shaikhparveen.20/" target="_blank"
+                                    class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/parveen-shaikh-328656301" target="_blank"
+                                    class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-card">
@@ -443,8 +455,8 @@
                             <div class="social-icons">
                                 <a href="https://www.instagram.com/vidhisha._28/" target="_blank" class="social-btn"><i
                                         class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/vidhisha-sonar-ba29b7325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-btn"><i
-                                        class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/vidhisha-sonar-ba29b7325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-card">
@@ -456,8 +468,8 @@
                             <div class="social-icons">
                                 <a href="https://www.instagram.com/vidhisha._28/" target="_blank" class="social-btn"><i
                                         class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/vidhisha-sonar-ba29b7325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-btn"><i
-                                        class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/vidhisha-sonar-ba29b7325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -475,8 +487,8 @@
                             <h3> </h3>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/sayalii17_/" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/sayalii17_/" target="_blank" class="social-btn"><i
+                                        class="fab fa-instagram"></i></a>
                                 <a href="http://www.linkedin.com/in/sayali-gaikwad17" target="_blank"
                                     class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
@@ -491,22 +503,8 @@
                             <div class="social-icons">
                                 <a href="https://www.instagram.com/prasad_patil_000//" target="_blank"
                                     class="social-btn"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/prasad-patil-b30905321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
-                                    class="social-btn"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-card">
-                            <img src="https://images.pexels.com/photos/6203790/pexels-photo-6203790.jpeg"
-                                alt="Team Member">
-                            <h4>Ms. Siddhi Patil</h4>
-                            <p>Member 2025-2026 </p>
-                            <h3> </h3>
-                            <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
-                            <div class="social-icons">
-                                <a href="https://www.instagram.com/_.siddhiii._p/" target="_blank" class="social-btn"><i
-                                        class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/siddhi-patil-922523326/" target="_blank"
-                                    class="social-btn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/prasad-patil-b30905321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-card">
@@ -526,13 +524,27 @@
                         <div class="member-card">
                             <img src="https://images.pexels.com/photos/6203790/pexels-photo-6203790.jpeg"
                                 alt="Team Member">
+                            <h4>Ms. Siddhi Patil</h4>
+                            <p>Member 2025-2026 </p>
+                            <h3> </h3>
+                            <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
+                            <div class="social-icons">
+                                <a href="https://www.instagram.com/_.siddhiii._p/" target="_blank" class="social-btn"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/siddhi-patil-922523326/" target="_blank"
+                                    class="social-btn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="https://images.pexels.com/photos/6203790/pexels-photo-6203790.jpeg"
+                                alt="Team Member">
                             <h4>Ms. Devyani Jadhav</h4>
                             <p>Member 2025-2026 </p>
                             <h3> </h3>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/devyanijadhav03?igsh=NDlyaThvNnU1aXp6" target="_blank" class="social-btn"><i
-                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/devyanijadhav03?igsh=NDlyaThvNnU1aXp6"
+                                    target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
                                 <!-- <a href="https://www.linkedin.com/in/aditya1311/" target="_blank" class="social-btn"><i
                                         class="fab fa-linkedin"></i></a> -->
                             </div>
@@ -547,8 +559,8 @@
                             <div class="social-icons">
                                 <!-- <a href="https://www.instagram.com/iamadditya/" target="_blank" class="social-btn"><i
                                         class="fab fa-instagram"></i></a> -->
-                                <a href="https://www.linkedin.com/in/sairaj-khade-95b9b6373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-btn"><i
-                                        class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/sairaj-khade-95b9b6373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
 
@@ -567,8 +579,8 @@
                             <h3> </h3>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/sohammore245/" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/sohammore245/" target="_blank" class="social-btn"><i
+                                        class="fab fa-instagram"></i></a>
                                 <a href="https://www.linkedin.com/in/soham-more-5b4688315/" target="_blank"
                                     class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
@@ -583,8 +595,8 @@
                             <div class="social-icons">
                                 <!-- <a href="https://www.instagram.com/vishwangh.patil/" target="_blank"
                                     class="social-btn"><i class="fab fa-instagram"></i></a> -->
-                                <a href="https://www.linkedin.com/in/nehal-more-021544272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
-                                    class="social-btn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/nehal-more-021544272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-card">
@@ -595,10 +607,10 @@
                             <h3> </h3>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/bhumii._227/" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/manaswi-gharat-8a2895277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
-                                    class="social-btn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/bhumii._227/" target="_blank" class="social-btn"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/manaswi-gharat-8a2895277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-card">
@@ -623,8 +635,8 @@
                             <h3> </h3>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/ayushiihiihii/" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/ayushiihiihii/" target="_blank" class="social-btn"><i
+                                        class="fab fa-instagram"></i></a>
                                 <!-- <a href="https://www.linkedin.com/in/vishwangh-patil-229b27311" target="_blank"
                                     class="social-btn"><i class="fab fa-linkedin"></i></a> -->
                             </div>
@@ -645,8 +657,8 @@
                             <h3> </h3>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/rajdudhara_18/" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/rajdudhara_18/" target="_blank" class="social-btn"><i
+                                        class="fab fa-instagram"></i></a>
                                 <a href="https://www.linkedin.com/in/raj-dudhara-009p2911f/" target="_blank"
                                     class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
@@ -687,8 +699,8 @@
                             <h3> </h3>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/iam_anuraggawli?igsh=NWU2c2NmMnp5Mm96" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/iam_anuraggawli?igsh=NWU2c2NmMnp5Mm96"
+                                    target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
                                 <!-- <a href="https://www.linkedin.com/in/vishwangh-patil-229b27311" target="_blank"
                                     class="social-btn"><i class="fab fa-linkedin"></i></a> -->
                             </div>
@@ -737,8 +749,8 @@
                             <h3> </h3>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/garvi_110?igsh=MW9od2g1cjNoeTU3bw==&utm_source=ig_contact_invite" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/garvi_110?igsh=MW9od2g1cjNoeTU3bw==&utm_source=ig_contact_invite"
+                                    target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
                                 <a href="https://www.linkedin.com/in/garvita-sharma-616195292" target="_blank"
                                     class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
@@ -767,8 +779,8 @@
                             <div class="social-icons">
                                 <!-- <a href="https://www.instagram.com/vishwangh.patil/" target="_blank"
                                     class="social-btn"><i class="fab fa-instagram"></i></a> -->
-                                <a href="https://www.linkedin.com/in/saanj-bari-59a2b1315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
-                                    class="social-btn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/saanj-bari-59a2b1315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-card">
@@ -779,10 +791,10 @@
                             <h3> </h3>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/itz__pooja.s/" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/pooja-sahu-b6a93b370?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
-                                    class="social-btn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/itz__pooja.s/" target="_blank" class="social-btn"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/pooja-sahu-b6a93b370?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-card">
@@ -795,8 +807,8 @@
                             <div class="social-icons">
                                 <a href="https://www.instagram.com/jimiditea_?igsh=amZnbW04bmV2a2J4" target="_blank"
                                     class="social-btn"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/diksha-gharat-abab7b370?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
-                                    class="social-btn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/diksha-gharat-abab7b370?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-card">
@@ -807,24 +819,24 @@
                             <h3> </h3>
                             <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
                             <div class="social-icons">
-                                <a href="https://www.instagram.com/neej_p223?igsh=MWlwNXV2bWZ2cXNi&utm_source=ig_contact_invite" target="_blank"
-                                    class="social-btn"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/neej-patel-968404260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
-                                    class="social-btn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/neej_p223?igsh=MWlwNXV2bWZ2cXNi&utm_source=ig_contact_invite"
+                                    target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/neej-patel-968404260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-card">
                             <img src="https://images.pexels.com/photos/6203790/pexels-photo-6203790.jpeg"
                                 alt="Team Member">
                             <h4>Mr. Aryan Dubey</h4>
-                            <p>Member 2025-2026 </p>
+                            <p>PR Member </p>
                             <h3> </h3>
-                            <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p>
+                            <!-- <p>Successfully conducted a 2-day intensive AI workshop with 50+ participants</p> -->
                             <div class="social-icons">
                                 <a href="https://www.instagram.com/aryandubey._26?igsh=ZGVqa2UzNXk3ZDht" target="_blank"
                                     class="social-btn"><i class="fab fa-instagram"></i></a>
-                                <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=aryan-dubey-a71293371" target="_blank"
-                                    class="social-btn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=aryan-dubey-a71293371"
+                                    target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
 
@@ -869,8 +881,10 @@
                     </div>
                     <div class="social-links">
                         <a href="https://wa.me/+91 91454 99937"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/itsa_sjcem/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/sjcem-itsa/" target="_blank"><i class="fab fa-linkedin"></i></a>                        
+                        <a href="https://www.instagram.com/itsa_sjcem/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/sjcem-itsa/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
 
@@ -888,8 +902,6 @@
             </div>
         </div>
     </section>
-
-
 
 
     <!-- View Events Popup recent event to add  -->
