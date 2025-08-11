@@ -302,7 +302,7 @@ function loadVanta(colorHex) {
     shininess: 80.00,
     waveHeight: 25.00,
     waveSpeed: 0.45,
-    zoom: 0.85
+    zoom: 1.80
   });
 }
 
