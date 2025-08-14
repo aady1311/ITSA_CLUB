@@ -302,7 +302,7 @@ function loadVanta(colorHex) {
     shininess: 80.00,
     waveHeight: 25.00,
     waveSpeed: 0.45,
-    zoom: 1.80
+    zoom: 1.85
   });
 }
 
@@ -328,5 +328,55 @@ document.getElementById("themeToggle").addEventListener("click", () => {
 
 
 
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const teamSection = document.getElementById('team');
+        const sliderViewBtns = document.querySelectorAll('.view-more-btn');
+
+        let currentIndex = 0;
+        let activeTeamId = null;
+        const totalSlides = slides.length;
+
+        function updateSlider() {
+            slider.style.transform = `translateX(${-currentIndex * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        sliderViewBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const teamId = btn.getAttribute('data-team');
+                const selectedTeam = document.getElementById(teamId);
+
+                if (!teamId || !selectedTeam) return;
+
+                if (teamSection.style.display === "block" && activeTeamId === teamId) {
+                    teamSection.style.display = "none";
+                    btn.textContent = "View More";
+                    activeTeamId = null;
+                } else {
+                    sliderViewBtns.forEach(b => b.textContent = "View More");
+
+                    teamSection.style.display = "block";
+                    document.querySelectorAll('.team-category').forEach(team => team.style.display = 'none');
+                    selectedTeam.style.display = 'block';
+
+                    activeTeamId = teamId;
+                    btn.textContent = "View Less";
+
+                    selectedTeam.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
 
 
