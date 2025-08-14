@@ -1244,3 +1244,15 @@ body {
     min-width: 100%;
 }
 
+/* Card should show 3 in line */
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 20px; 
+}
+
+.member-card {
+  flex: 0 0 calc(33.333% - 20px); 
+  box-sizing: border-box;
+}
