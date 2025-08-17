@@ -380,3 +380,63 @@ document.getElementById("themeToggle").addEventListener("click", () => {
         });
 
 
+// Function for slider to auto slide
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector(".slider");
+  const slides = document.querySelectorAll(".slide");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+  const slideWidth = slides[0].offsetWidth; 
+  let autoSlideInterval;
+
+
+  function updateSlide() {
+    slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    slider.style.transition = "transform 0.5s ease-in-out";
+  }
+
+ 
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlide();
+  }
+
+ 
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlide();
+  }
+
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 3000); 
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+ 
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    stopAutoSlide();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    stopAutoSlide();
+    startAutoSlide();
+  });
+
+  
+  document.querySelector(".slider-container").addEventListener("mouseenter", stopAutoSlide);
+  document.querySelector(".slider-container").addEventListener("mouseleave", startAutoSlide);
+
+
+  startAutoSlide();
+});

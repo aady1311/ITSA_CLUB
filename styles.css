@@ -1025,33 +1025,39 @@ body {
 
 
     /* Slider */
-    .slider-container {
-      position: relative;
-      width: 90%;
-      max-width: 900px;
-      margin: auto;
-      overflow: hidden;
-      border-radius: 10px;
-      background: #fff;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
+.slider-container {
+  position: relative;
+  width: 100%;                 
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background: transparent;     
+}
 
-    .slider {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-    }
+.slider {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
 
-    .slide {
-      flex: 0 0 100%;
-      position: relative;
-      height: 400px;
-    }
+.slide {
+  flex: 0 0 90%;               
+  max-width: 90%;
+  margin: 0 auto;              
+  position: relative;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+  padding: 0px 5px;
+}
 
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
 
     /* Caption */
     .caption {
@@ -1244,7 +1250,6 @@ body {
     min-width: 100%;
 }
 
-/* Card should show 3 in line */
 .team-members {
   display: flex;
   flex-wrap: wrap;
@@ -1255,4 +1260,50 @@ body {
 .member-card {
   flex: 0 0 calc(33.333% - 20px); 
   box-sizing: border-box;
+}
+
+/* Slider feature */
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+}
+
+.slide {
+  min-width: 100%; 
+  box-sizing: border-box;
+}
+
+/* Mobile view for cards */
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 20px; 
+}
+
+.member-card {
+  flex: 0 0 calc(33.333% - 20px); 
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 600px) {
+  .team-members {
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
+    padding: 0; 
+  }
+
+  .member-card {
+    flex: 0 0 100%;  
+    max-width: 100%; 
+  }
 }
