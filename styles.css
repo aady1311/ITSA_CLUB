@@ -248,7 +248,7 @@ body {
 }
 
 .cta-button {
-    background: var(--gradient-accent);
+    background: linear-gradient(45deg, #4c33f0ff, #0875ebff);
     color: white;
     border: none;
     padding: 18px 35px;
@@ -262,7 +262,7 @@ body {
     gap: 10px;
     opacity: 0;
     animation: fadeInUp 1s ease 1.1s forwards;
-    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+    /* box-shadow: 0 8px 25px rgba(79, 87, 246, 0.4); */
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-size: 1rem;
@@ -273,8 +273,8 @@ body {
 
 .cta-button:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 35px rgba(245, 158, 11, 0.6);
-    background: linear-gradient(45deg, #f59e0b, #dc2626);
+    box-shadow: 0 15px 35px rgba(35, 31, 238, 0.6);
+    background: linear-gradient(45deg, #2a0bf5ff, #267edcff);
 }
 
 .cta-button i {
